@@ -1,0 +1,23 @@
+[
+  {
+    "tagName": "div",
+    "attributes": []
+  },
+  {
+    "tagName": "h1",
+    "attributes": []
+  },
+  {
+    "tagName": "button",
+    "attributes": []
+  },
+  {
+    "tagName": "input",
+    "attributes": [
+      {
+        "name": "placeholder",
+        "value": "Enter text"
+      }
+    ]
+  }
+]
