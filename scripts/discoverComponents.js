@@ -15,8 +15,7 @@ function discoverComponents(dir, components = []) {
     if (stat.isDirectory()) {
       discoverComponents(filePath, components);
     } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
-      const component = { fileDir: filePath, componentName: path.basename(file, path.extname(file))};
-      components.push(component);
+      components.push(filePath);
     }
   });
 

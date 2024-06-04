@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const babelParser = require('@babel/parser');
 const traverse = require('@babel/traverse').default;
-const t = require('@babel/types');
 
 function analyzeComponent(filePath) {
   const code = fs.readFileSync(filePath, 'utf-8');
@@ -32,5 +31,5 @@ function analyzeComponent(filePath) {
 
 const componentPath = path.join(__dirname, '../src/components/MyComponent.js');
 const elements = analyzeComponent(componentPath);
-fs.writeFileSync(path.join(__dirname, 'componentAnalysis.json'), JSON.stringify(elements, null, 2));
+fs.writeFileSync(path.join(__dirname, 'componentAnalysis.json'), JSON.stringify(elements, null, 2), 'utf-8');
 console.log('Component analysis:', elements);

@@ -19,7 +19,8 @@
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "discover-and-test": "node scripts/discoverComponents.js && node scripts/generateTests.js && jest --coverage",
-    "analyze-and-generate-tests": "node scripts/analyzeComponent.js && node scripts/generateRandomTests.js && jest --coverage"
+    "analyze-and-generate-tests": "node scripts/analyzeComponent.js && node scripts/generateRandomTests.js && jest --coverage",
+    "components": "node scripts/discoverComponents.js && node scripts/analyzeComponent.js"
   },
   "eslintConfig": {
     "extends": [
