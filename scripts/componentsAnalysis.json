@@ -1,6 +1,20 @@
 [
   [
     {
+      "tagName": "TodoList",
+      "attributes": []
+    },
+    {
+      "tagName": "TodoList",
+      "attributes": []
+    },
+    {
+      "tagName": "MyComponent",
+      "attributes": []
+    }
+  ],
+  [
+    {
       "tagName": "Form",
       "attributes": [
         {
@@ -20,6 +34,7 @@
       "attributes": []
     },
     {
+      "tagName": "input",
       "attributes": [
         {
           "name": "type",
@@ -32,6 +47,10 @@
         {
           "name": "placeholder",
           "value": "Enter todo"
+        },
+        {
+          "name": "data-testid",
+          "value": "todo-input"
         }
       ]
     },
@@ -45,6 +64,10 @@
         {
           "name": "type",
           "value": "submit"
+        },
+        {
+          "name": "data-testid",
+          "value": "todo-submit"
         }
       ]
     }

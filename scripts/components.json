@@ -1,4 +1,5 @@
 [
+  "../src/__tests__/todo.test.tsx",
   "../src/components/AddTodo.js",
   "../src/components/Header.js",
   "../src/components/MyComponent.js",
