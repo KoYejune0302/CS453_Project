@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 
-const AddTodo = (props) => {
+function AddTodo(props) {
   return (
     <Form onSubmit={props.handleAddTodo}>
       <Form.Group controlId="item">

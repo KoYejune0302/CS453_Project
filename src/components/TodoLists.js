@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-const TodoLists = (props) => {
+function TodoLists(props) {
     return (
         <div className="todo-list">
             {props.todos.length === 0 && <p>No todos found. Please add some.</p> }
