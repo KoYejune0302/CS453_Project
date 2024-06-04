@@ -8,14 +8,15 @@ function discoverComponents(dir, components = []) {
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    console.log('filePath:', filePath);
-    console.log(stat.isFile());
-    console.log(/\.(js|jsx|ts|tsx)$/.test(file));
+    // console.log('filePath:', filePath);
+    // console.log(stat.isFile());
+    // console.log(/\.(js|jsx|ts|tsx)$/.test(file));
 
     if (stat.isDirectory()) {
       discoverComponents(filePath, components);
     } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
-      components.push(filePath);
+      components.push(path.join('../src/', filePath.replace(path.join(__dirname, '../src/'), '')
+      ));
     }
   });
 

@@ -1,26 +1,9 @@
 [
-  {
-    "fileDir": "/Users/koyejune0302/Desktop/KAIST/2024S/Automated Software testing CS453/Project/test_repo/src/components/AddTodo.js",
-    "componentName": "AddTodo"
-  },
-  {
-    "fileDir": "/Users/koyejune0302/Desktop/KAIST/2024S/Automated Software testing CS453/Project/test_repo/src/components/Header.js",
-    "componentName": "Header"
-  },
-  {
-    "fileDir": "/Users/koyejune0302/Desktop/KAIST/2024S/Automated Software testing CS453/Project/test_repo/src/components/TodoItem.js",
-    "componentName": "TodoItem"
-  },
-  {
-    "fileDir": "/Users/koyejune0302/Desktop/KAIST/2024S/Automated Software testing CS453/Project/test_repo/src/components/TodoList.js",
-    "componentName": "TodoList"
-  },
-  {
-    "fileDir": "/Users/koyejune0302/Desktop/KAIST/2024S/Automated Software testing CS453/Project/test_repo/src/components/TodoLists.js",
-    "componentName": "TodoLists"
-  },
-  {
-    "fileDir": "/Users/koyejune0302/Desktop/KAIST/2024S/Automated Software testing CS453/Project/test_repo/src/index.js",
-    "componentName": "index"
-  }
+  "../src/components/AddTodo.js",
+  "../src/components/Header.js",
+  "../src/components/MyComponent.js",
+  "../src/components/TodoItem.js",
+  "../src/components/TodoList.js",
+  "../src/components/TodoLists.js",
+  "../src/index.js"
 ]
