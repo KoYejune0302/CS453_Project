@@ -4,7 +4,7 @@ import React from 'react';
 function MyComponent() {
   return <div>
     <h1>My Component</h1>
-    <button>Click me</button>
+    <button onClick={alert(1)} >Click me</button>
     <input placeholder="Enter text" />
   </div>
 };

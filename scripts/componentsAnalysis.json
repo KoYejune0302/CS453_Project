@@ -39,7 +39,11 @@
             "testId": "todo-input",
             "id": null,
             "class": null,
-            "listeners": []
+            "listeners": [
+              {
+                "event": "onChange"
+              }
+            ]
           },
           {
             "type": "Component",
@@ -47,7 +51,11 @@
             "testId": "todo-submit",
             "id": null,
             "class": null,
-            "listeners": []
+            "listeners": [
+              {
+                "event": "onClick"
+              }
+            ]
           }
         ]
       }
@@ -99,7 +107,11 @@
             "testId": null,
             "id": null,
             "class": null,
-            "listeners": []
+            "listeners": [
+              {
+                "event": "onClick"
+              }
+            ]
           },
           {
             "type": "HTML",

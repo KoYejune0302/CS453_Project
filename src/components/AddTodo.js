@@ -11,9 +11,10 @@ function AddTodo(props) {
           name="todo"
           placeholder="Enter todo"
           data-testid="todo-input"
+          onChange={alert(1)}
         />
       </Form.Group>
-      <Button variant="primary" type="submit" data-testid="todo-submit">
+      <Button variant="primary" type="submit" data-testid="todo-submit" onClick={alert(2)}>
         Add Todo
       </Button>
     </Form>
