@@ -117,8 +117,13 @@ function findComponentAttributes(ast) {
 const components = JSON.parse(fs.readFileSync(path.join(__dirname, 'components.json'), 'utf-8'));
 const elements = components.map(component => {
   const componentPath = path.join(__dirname, component);
-  return findComponent(componentPath);
+  return {
+    "file" : component,
+    "result" : findComponent(componentPath)
+  }
 });
+
+console.log(elements)
 
 fs.writeFileSync(path.join(__dirname, 'componentsAnalysis.json'), JSON.stringify(elements, null, 2), 'utf-8');
 console.log('Components analysis:', elements);

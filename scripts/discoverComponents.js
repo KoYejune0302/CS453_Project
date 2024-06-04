@@ -23,6 +23,6 @@ function discoverComponents(dir, components = []) {
   return components;
 }
 
-const components = discoverComponents(path.join(__dirname, '../src'));
+const components = discoverComponents(path.join(__dirname, '../src/components'));
 fs.writeFileSync(path.join(__dirname, 'components.json'), JSON.stringify(components, null, 2));
 console.log('Discovered components:', components);

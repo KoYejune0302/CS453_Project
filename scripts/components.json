@@ -4,6 +4,5 @@
   "../src/components/MyComponent.js",
   "../src/components/TodoItem.js",
   "../src/components/TodoList.js",
-  "../src/components/TodoLists.js",
-  "../src/index.js"
+  "../src/components/TodoLists.js"
 ]
