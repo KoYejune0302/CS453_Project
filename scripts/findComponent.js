@@ -34,6 +34,17 @@ function findComponentAttributes(ast) {
           let elementListeners = [];
           let elementType = bodyNode.name.name;
 
+          // Handle compound component names like Form.Group
+          if (bodyNode.name.type === 'JSXMemberExpression') {
+            elementType = getFullElementName(bodyNode.name);
+          }
+
+          // Check if the elementType is a component or HTML tag
+          // Later, use white list to filter
+          const isComponent = /^[A-Z]/.test(elementType);
+          const tagType = isComponent ? 'Component' : 'HTML';
+          const tagName = elementType;
+
           bodyNode.attributes.forEach(attr => {
             if (attr.name.name === 'id') {
               elementId = attr.value && attr.value.value;
@@ -48,7 +59,8 @@ function findComponentAttributes(ast) {
           });
 
           componentAttributes.push({
-            type: elementType,
+            type: tagType,
+            name: tagName,
             id: elementId,
             class: elementClass,
             listeners: elementListeners
@@ -71,6 +83,15 @@ function findComponentAttributes(ast) {
         walk(node[key], node);
       }
     }
+  }
+
+  function getFullElementName(nameNode) {
+    if (nameNode.type === 'JSXIdentifier') {
+      return nameNode.name;
+    } else if (nameNode.type === 'JSXMemberExpression') {
+      return `${getFullElementName(nameNode.object)}.${getFullElementName(nameNode.property)}`;
+    }
+    return '';
   }
 
   function returnsJSX(bodyNode) {
