@@ -1,0 +1,10 @@
+[
+  {
+    "testId": "todo-input",
+    "eventType": "change"
+  },
+  {
+    "testId": "todo-submit",
+    "eventType": "click"
+  }
+]
