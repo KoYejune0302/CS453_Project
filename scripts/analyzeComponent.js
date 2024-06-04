@@ -29,7 +29,15 @@ function analyzeComponent(filePath) {
   return elements;
 }
 
-const componentPath = path.join(__dirname, '../src/components/MyComponent.js');
-const elements = analyzeComponent(componentPath);
-fs.writeFileSync(path.join(__dirname, 'componentAnalysis.json'), JSON.stringify(elements, null, 2), 'utf-8');
-console.log('Component analysis:', elements);
+// iterate over all components and analyze them
+// the components dir is in components.json
+const components = JSON.parse(fs.readFileSync(path.join(__dirname, 'components.json'), 'utf-8'));
+const elements = components.map(component => {
+  const componentPath = path.join(__dirname, component);
+  return analyzeComponent(componentPath);
+});
+
+fs.writeFileSync(path.join(__dirname, 'componentsAnalysis.json'), JSON.stringify(elements, null, 2), 'utf-8');
+console.log('Components analysis:', elements);
+
+

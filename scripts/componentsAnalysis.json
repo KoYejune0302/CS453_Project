@@ -1,0 +1,159 @@
+[
+  [
+    {
+      "tagName": "Form",
+      "attributes": [
+        {
+          "name": "onSubmit"
+        }
+      ]
+    },
+    {
+      "attributes": [
+        {
+          "name": "controlId",
+          "value": "item"
+        }
+      ]
+    },
+    {
+      "attributes": []
+    },
+    {
+      "attributes": [
+        {
+          "name": "type",
+          "value": "text"
+        },
+        {
+          "name": "name",
+          "value": "todo"
+        },
+        {
+          "name": "placeholder",
+          "value": "Enter todo"
+        }
+      ]
+    },
+    {
+      "tagName": "Button",
+      "attributes": [
+        {
+          "name": "variant",
+          "value": "primary"
+        },
+        {
+          "name": "type",
+          "value": "submit"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "tagName": "h1",
+      "attributes": []
+    }
+  ],
+  [
+    {
+      "tagName": "div",
+      "attributes": []
+    },
+    {
+      "tagName": "h1",
+      "attributes": []
+    },
+    {
+      "tagName": "button",
+      "attributes": []
+    },
+    {
+      "tagName": "input",
+      "attributes": [
+        {
+          "name": "placeholder",
+          "value": "Enter text"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "tagName": "div",
+      "attributes": [
+        {
+          "name": "className",
+          "value": "todo-item"
+        }
+      ]
+    },
+    {
+      "tagName": "h2",
+      "attributes": []
+    }
+  ],
+  [
+    {
+      "tagName": "div",
+      "attributes": [
+        {
+          "name": "className",
+          "value": "container"
+        }
+      ]
+    },
+    {
+      "tagName": "Header",
+      "attributes": []
+    },
+    {
+      "tagName": "AddTodo",
+      "attributes": [
+        {
+          "name": "handleAddTodo"
+        }
+      ]
+    },
+    {
+      "tagName": "TodoLists",
+      "attributes": [
+        {
+          "name": "todos"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "tagName": "div",
+      "attributes": [
+        {
+          "name": "className",
+          "value": "todo-list"
+        }
+      ]
+    },
+    {
+      "tagName": "p",
+      "attributes": []
+    },
+    {
+      "tagName": "TodoItem",
+      "attributes": [
+        {
+          "name": "key"
+        },
+        {
+          "name": "todo"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "tagName": "TodoList",
+      "attributes": []
+    }
+  ]
+]
