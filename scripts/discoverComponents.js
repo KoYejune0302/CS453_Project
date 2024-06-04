@@ -14,7 +14,7 @@ function discoverComponents(dir, components = []) {
 
     if (stat.isDirectory()) {
       discoverComponents(filePath, components);
-    } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
+    } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file) && !/\.test\.(js|jsx|ts|tsx)$/.test(file)) {
       components.push(path.join('../src/', filePath.replace(path.join(__dirname, '../src/'), '')
       ));
     }

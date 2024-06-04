@@ -1,20 +1,6 @@
 [
   [
     {
-      "tagName": "TodoList",
-      "attributes": []
-    },
-    {
-      "tagName": "TodoList",
-      "attributes": []
-    },
-    {
-      "tagName": "MyComponent",
-      "attributes": []
-    }
-  ],
-  [
-    {
       "tagName": "Form",
       "attributes": [
         {
