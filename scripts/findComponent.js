@@ -1,6 +1,7 @@
 const acorn = require('acorn');
 const jsx = require('acorn-jsx');
 const fs = require('fs');
+const path = require('path');
 
 function findComponent(filePath) {
     const code = fs.readFileSync(filePath, 'utf-8');
@@ -9,7 +10,7 @@ function findComponent(filePath) {
     const ast = parser.parse(code, { sourceType: 'module', ecmaVersion: 2020 });
     const componentAttributes = findComponentAttributes(ast);
 
-    return JSON.stringify(componentAttributes, null, 2);
+    return componentAttributes;
 }
 
 function findComponentAttributes(ast) {
@@ -113,4 +114,11 @@ function findComponentAttributes(ast) {
   return components;
 }
 
-console.log(findComponent("src/components/AddTodo.js"))
+const components = JSON.parse(fs.readFileSync(path.join(__dirname, 'components.json'), 'utf-8'));
+const elements = components.map(component => {
+  const componentPath = path.join(__dirname, component);
+  return findComponent(componentPath);
+});
+
+fs.writeFileSync(path.join(__dirname, 'componentsAnalysis.json'), JSON.stringify(elements, null, 2), 'utf-8');
+console.log('Components analysis:', elements);

@@ -1,145 +1,250 @@
 [
   [
     {
-      "tagName": "Form",
+      "component": "AddTodo",
       "attributes": [
         {
-          "name": "onSubmit"
+          "type": "Component",
+          "name": "Form",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": [
+            {
+              "event": "onSubmit"
+            }
+          ]
+        },
+        {
+          "type": "Component",
+          "name": "Form.Group",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "Component",
+          "name": "Form.Label",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "HTML",
+          "name": "input",
+          "testId": "todo-input",
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "Component",
+          "name": "Button",
+          "testId": "todo-submit",
+          "id": null,
+          "class": null,
+          "listeners": []
         }
       ]
     },
     {
+      "component": "Temp",
       "attributes": [
         {
-          "name": "controlId",
-          "value": "item"
-        }
-      ]
-    },
-    {
-      "attributes": []
-    },
-    {
-      "tagName": "input",
-      "attributes": [
-        {
-          "name": "type",
-          "value": "text"
+          "type": "Component",
+          "name": "Form",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": [
+            {
+              "event": "onSubmit"
+            }
+          ]
         },
         {
-          "name": "name",
-          "value": "todo"
+          "type": "Component",
+          "name": "Form.Group",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
         },
         {
-          "name": "placeholder",
-          "value": "Enter todo"
+          "type": "Component",
+          "name": "Form.Label",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
         },
         {
-          "name": "data-testid",
-          "value": "todo-input"
-        }
-      ]
-    },
-    {
-      "tagName": "Button",
-      "attributes": [
-        {
-          "name": "variant",
-          "value": "primary"
+          "type": "HTML",
+          "name": "input",
+          "testId": "todo-input",
+          "id": null,
+          "class": null,
+          "listeners": []
         },
         {
-          "name": "type",
-          "value": "submit"
-        },
-        {
-          "name": "data-testid",
-          "value": "todo-submit"
+          "type": "Component",
+          "name": "Button",
+          "testId": "todo-submit",
+          "id": null,
+          "class": null,
+          "listeners": []
         }
       ]
     }
   ],
   [
     {
-      "tagName": "h1",
-      "attributes": []
-    }
-  ],
-  [
-    {
-      "tagName": "div",
+      "component": "Header",
       "attributes": [
         {
-          "name": "className",
-          "value": "todo-item"
-        }
-      ]
-    },
-    {
-      "tagName": "h2",
-      "attributes": []
-    }
-  ],
-  [
-    {
-      "tagName": "div",
-      "attributes": [
-        {
-          "name": "className",
-          "value": "container"
-        }
-      ]
-    },
-    {
-      "tagName": "Header",
-      "attributes": []
-    },
-    {
-      "tagName": "AddTodo",
-      "attributes": [
-        {
-          "name": "handleAddTodo"
-        }
-      ]
-    },
-    {
-      "tagName": "TodoLists",
-      "attributes": [
-        {
-          "name": "todos"
+          "type": "HTML",
+          "name": "h1",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
         }
       ]
     }
   ],
   [
     {
-      "tagName": "div",
+      "component": "MyComponent",
       "attributes": [
         {
-          "name": "className",
-          "value": "todo-list"
-        }
-      ]
-    },
-    {
-      "tagName": "p",
-      "attributes": []
-    },
-    {
-      "tagName": "TodoItem",
-      "attributes": [
-        {
-          "name": "key"
+          "type": "HTML",
+          "name": "div",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
         },
         {
-          "name": "todo"
+          "type": "HTML",
+          "name": "h1",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "HTML",
+          "name": "button",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "HTML",
+          "name": "input",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
         }
       ]
     }
   ],
   [
     {
-      "tagName": "TodoList",
-      "attributes": []
+      "component": "TodoItem",
+      "attributes": [
+        {
+          "type": "HTML",
+          "name": "div",
+          "testId": null,
+          "id": null,
+          "class": "todo-item",
+          "listeners": []
+        },
+        {
+          "type": "HTML",
+          "name": "h2",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        }
+      ]
     }
-  ]
+  ],
+  [
+    {
+      "component": "TodoList",
+      "attributes": [
+        {
+          "type": "HTML",
+          "name": "div",
+          "testId": null,
+          "id": null,
+          "class": "container",
+          "listeners": []
+        },
+        {
+          "type": "Component",
+          "name": "Header",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "Component",
+          "name": "AddTodo",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "Component",
+          "name": "TodoLists",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "component": "TodoLists",
+      "attributes": [
+        {
+          "type": "HTML",
+          "name": "div",
+          "testId": null,
+          "id": null,
+          "class": "todo-list",
+          "listeners": []
+        },
+        {
+          "type": "HTML",
+          "name": "p",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        },
+        {
+          "type": "Component",
+          "name": "TodoItem",
+          "testId": null,
+          "id": null,
+          "class": null,
+          "listeners": []
+        }
+      ]
+    }
+  ],
+  []
 ]

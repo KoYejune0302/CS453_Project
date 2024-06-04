@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "components": "node scripts/discoverComponents.js && node scripts/analyzeComponent.js",
+    "components": "node scripts/discoverComponents.js && node scripts/findComponent.js",
     "analyze-test": "node scripts/discoverTests.js && node scripts/analyzeTest.js"
   },
   "eslintConfig": {
