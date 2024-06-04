@@ -31,6 +31,7 @@ function findComponentAttributes(ast) {
         if (bodyNode.type === 'JSXOpeningElement') {
           let elementId = null;
           let elementClass = null;
+          let elementTestId = null;
           let elementListeners = [];
           let elementType = bodyNode.name.name;
 
@@ -50,6 +51,8 @@ function findComponentAttributes(ast) {
               elementId = attr.value && attr.value.value;
             } else if (attr.name.name === 'className' || attr.name.name === 'class') {
               elementClass = attr.value && attr.value.value;
+            } else if (attr.name.name == "data-testid") {
+              elementTestId = attr.value && attr.value.value;
             } else if (attr.name.name.startsWith('on')) {
               elementListeners.push({
                 event: attr.name.name,
@@ -61,6 +64,7 @@ function findComponentAttributes(ast) {
           componentAttributes.push({
             type: tagType,
             name: tagName,
+            testId: elementTestId,
             id: elementId,
             class: elementClass,
             listeners: elementListeners
@@ -109,4 +113,4 @@ function findComponentAttributes(ast) {
   return components;
 }
 
-// console.log(findComponent("src/components/MyComponent.js"))
+console.log(findComponent("src/components/AddTodo.js"))
