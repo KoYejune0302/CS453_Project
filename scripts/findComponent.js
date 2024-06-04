@@ -88,4 +88,4 @@ function findComponentAttributes(ast) {
   return components;
 }
 
-// console.log(findComponent("./example.js"))
+// console.log(findComponent("src/components/MyComponent.js"))

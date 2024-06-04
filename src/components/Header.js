@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+function Header() {
     return (
         <h1>Todo List App</h1>
     )
