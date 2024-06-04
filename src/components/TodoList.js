@@ -1,43 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import AddTodo from "./AddTodo";
 import TodoLists from "./TodoLists";
 
-export default class TodoList extends React.Component {
-  state = {
-    todos: [],
-  };
-  componentDidMount() {
+export default function TodoList() {
+  const [todos, setTodos] = React.useState([]);
+
+  useEffect(() => {
     const todos = localStorage.getItem("todos");
     if (todos) {
       const parsedJSON = JSON.parse(todos);
-      this.setState({ todos: parsedJSON });
+      setTodos(parsedJSON);
     }
-  }
-  componentDidUpdate(prevProps, prevState) {
-    const { todos } = this.state;
-    if (prevState.todos.length !== this.state.todos.length) {
-      const json = JSON.stringify(todos);
-      localStorage.setItem("todos", json);
-    }
-  }
-  handleAddTodo = (event) => {
+  }, []);
+
+  useEffect(() => {
+    const json = JSON.stringify(todos);
+    localStorage.setItem("todos", json);
+  }, [todos]);
+
+  const handleAddTodo = (event) => {
     event.preventDefault();
     const todo = event.target.todo?.value?.trim() || "";
     if (todo) {
-      this.setState((prevState) => ({
-        todos: [...prevState.todos, todo],
-      }));
+      setTodos([...todos, todo]);
       event.target.todo.value = "";
     }
   };
-  render() {
-    return (
-      <div className="container">
-        <Header />
-        <AddTodo handleAddTodo={this.handleAddTodo} />
-        <TodoLists todos={this.state.todos} />
-      </div>
-    );
-  }
+
+  return (
+    <div className="container">
+      <Header />
+      <AddTodo handleAddTodo={handleAddTodo} />
+      <TodoLists todos={todos} />
+    </div>
+  );
 }
