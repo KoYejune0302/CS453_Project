@@ -40,11 +40,12 @@ function analyzeTest(filePath) {
   return events;
 }
 
-const componentPath = path.join(__dirname, "../src/__tests__/todo.test.tsx");
-const elements = analyzeTest(componentPath);
-fs.writeFileSync(
-  path.join(__dirname, "testAnalysis.json"),
-  JSON.stringify(elements, null, 2),
-  "utf-8"
-);
-console.log("Test analysis:", elements);
+
+const tests = JSON.parse(fs.readFileSync(path.join(__dirname, 'tests.json'), 'utf-8'));
+const elements = tests.map(test => {
+  const testPath = path.join(__dirname, test);
+  return analyzeTest(testPath);
+});
+
+fs.writeFileSync(path.join(__dirname, 'testsAnalysis.json'), JSON.stringify(elements, null, 2), 'utf-8');
+console.log('Tests analysis:', elements);
