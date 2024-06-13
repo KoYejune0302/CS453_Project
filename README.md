@@ -4,7 +4,8 @@
 
 ## About this project
 
-This project aim to check the validity of the testcode. It checks the component & evenet listener coverage of the testcode.
+This project aim to check the validity of the testcode. It checks the component & evenet listener coverage of the testcode.\
+The purpose of this research is to verify the validity of the test code itself and provide meaningful information for web development through static analysis.
 
 ## Available Scripts
 
@@ -25,4 +26,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run analyze`
 
-Run test code validation script to check the component coverage for the test codes.
+Run test code validation script to check the component coverage for the test codes.\
+To chek only for component and test code analyze you can run `npm run analyze-components` and `npm run analyze-tests`
